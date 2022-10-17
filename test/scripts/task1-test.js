@@ -218,12 +218,11 @@ suite(function(env) {
                 await driver.manage().window().maximize();
             
                 await driver.get(hostUrl);
-                await driver.wait(until.elementLocated(By.css('[id^="book-item-"]')), 3000);
             
-                // get container and book items
-                let container = await driver.findElement(By.id('container'));
-                let bookItems = await container.findElements(By.css("[id^='book-item-']"));
-                let toggle = await bookItems.findElement(By.css('.book-toggle'));
+                // wait book items to be loaded
+                await driver.wait(until.elementLocated(By.css('[id^="book-item-"]')), 3000);
+                let toggle = await driver.findElement(By.css('.book-toggle'));
+
                 // click a toggle
                 await toggle.click();
 
