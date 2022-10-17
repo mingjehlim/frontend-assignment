@@ -121,7 +121,7 @@ suite(function(env) {
             });
         });
 
-        it('Case 1 - 4. Book count is 3', async function() {
+        it('Case 1 - 4. Book item count is 3', async function() {
             return new Promise(async function(resolve, reject) {
                 // Maximize window
                 await driver.manage().window().maximize();
@@ -146,7 +146,7 @@ suite(function(env) {
             });
         });
 
-        it('Case 1 - 5. Book element width and height is 409px x 108px', async function() {
+        it('Case 1 - 5. Book item element width and height is 409px x 108px', async function() {
             return new Promise(async function(resolve, reject) {
                 // Maximize window
                 await driver.manage().window().maximize();
@@ -179,7 +179,7 @@ suite(function(env) {
             });
         });
 
-        it('Case 1 - 6. Only 1 book item can be expanded at once, with 3 childs max', async function() {
+        it('Case 1 - 6. Only 1 book item can be expanded at once, with 3 borrowers max', async function() {
             return new Promise(async function(resolve, reject) {
                 // Maximize window
                 await driver.manage().window().maximize();
@@ -212,7 +212,7 @@ suite(function(env) {
             });
         });
 
-        it('Case 1 - 7. Child width and height is 331px x 79px', async function() {
+        it('Case 1 - 7. Borrower element width and height is 331px x 79px', async function() {
             return new Promise(async function(resolve, reject) {
                 // Maximize window
                 await driver.manage().window().maximize();

@@ -182,12 +182,12 @@ class BookItem extends React.Component {
                         <div className="book-author">by {this.props.data[i].author}</div>
                     </div>
                 </div>
-                <div className="book-customers">
+                <div className="book-borrowers">
                     {
                         this.state.isExpanded &&
                         this.props.data[i].borrower
                             .map((data, index) => 
-                            <BookCustomerItem key={index} data={data} />
+                            <BookBorrowerItem key={index} data={data} />
                     )}
                 </div>
             </Fragment>
@@ -195,14 +195,14 @@ class BookItem extends React.Component {
     }
 }
 
-class BookCustomerItem extends React.Component {
+class BookBorrowerItem extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <div className="customer">{this.props.data}</div>
+            <div className="borrower">{this.props.data}</div>
         );
     }
 }
